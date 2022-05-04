@@ -23,3 +23,12 @@ func ForEach[E any](input []E, iteratee func(E)) {
 		iteratee(v)
 	}
 }
+
+func Contains[E comparable](haystack []E, needle E) bool {
+	for _, v := range haystack {
+		if v == needle {
+			return true
+		}
+	}
+	return false
+}

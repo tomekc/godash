@@ -59,3 +59,13 @@ godash.ForEach(urls, func(url) {
 	fetch(url)
 })
 ```
+
+### Contains
+
+Tell if slice contains given element.
+
+```go
+result := Contains([]string{"alice", "bob", "charlie"}, "bob")
+
+// true
+```

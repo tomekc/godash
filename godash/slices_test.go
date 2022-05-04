@@ -60,3 +60,15 @@ func TestForEach(t *testing.T) {
 		assert.Equal(t, input, output)
 	})
 }
+
+func TestContains(t *testing.T) {
+	t.Run("find", func(t *testing.T) {
+		found := Contains([]string{"alice", "bob", "charlie"}, "bob")
+		assert.Truef(t, found, "Element should be in slice")
+	})
+
+	t.Run("not found", func(t *testing.T) {
+		found := Contains([]string{"alice", "bob", "charlie"}, "bobcat")
+		assert.False(t, found, "Element should not ®be in slice")
+	})
+}
